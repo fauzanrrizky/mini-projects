@@ -1,0 +1,39 @@
+# Login ke VM
+ssh username@vm_ip_address
+
+# Update paket dan instal Python dan venv jika belum terinstal
+sudo apt update
+sudo apt install python3 python3-venv
+
+# Buat direktori proyek (opsional) dan masuk ke dalamnya
+mkdir myproject
+cd myproject
+
+# Buat virtual environment
+python3 -m venv myenv
+
+# Aktifkan virtual environment
+source envData/bin/activate
+
+# Upgrade pip jika diperlukan
+pip install --upgrade pip
+
+# Instal yfinance
+pip install yfinance
+pip install pandas
+
+# Verifikasi instalasi
+python -c "import yfinance as yf; print(yf.__version__)"
+
+
+
+pip install mage-ai   
+pip install google-cloud-bigquery
+pip install db-dtypes
+
+
+source envData/bin/activate
+mage start idx-analysis
+
+
+
